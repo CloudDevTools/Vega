@@ -25,6 +25,7 @@ export class ServiceProvider{
         this._host = host;
         this._port = port;
         this._version = version;
+        this._tcp_port = tcp_port;
     }
 
     get host(): string {
@@ -37,5 +38,8 @@ export class ServiceProvider{
 
     get version(): string {
         return this._version;
+    }
+    get tcp_port():number{
+        return this._tcp_port;
     }
 }
