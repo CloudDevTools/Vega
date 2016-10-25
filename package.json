@@ -1,0 +1,11 @@
+{
+  "name": "Vega",
+  "version": "0.0.1",
+  "devDependencies": {
+    "@types/node": "^6.0.45",
+    "gulp": "^3.9.1",
+    "gulp-typescript": "^3.0.2",
+    "mocha": "^3.1.2",
+    "typescript": "^2.0.3"
+  }
+}
