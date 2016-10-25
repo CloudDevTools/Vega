@@ -1,14 +1,13 @@
 /**
  * Created by yubing on 2016/10/25.
  */
-
-export class ServiceProvider{
+export class ServiceConsumer{
     private _host:string;
     private _port:number;
     private _version:string;
     private _tcp_port:number;
 
-    constructor(host:string,port:number,tcp_port:number,version:string){
+    constructor(host:string,port:number,tcp_port:number,version?:string){
         if(host == null || host == ""){
             throw "Provider host name can not be empty!";
         }
@@ -17,9 +16,6 @@ export class ServiceProvider{
         }
         if(tcp_port <= 1000){
             throw "Provider tcp port must big than 1000!";
-        }
-        if(version == null || version == ""){
-            throw "Provider version can not be empty!";
         }
 
         this._host = host;
@@ -39,7 +35,8 @@ export class ServiceProvider{
     get version(): string {
         return this._version;
     }
-    get tcp_port():number{
+
+    get tcp_port(): number {
         return this._tcp_port;
     }
 }
